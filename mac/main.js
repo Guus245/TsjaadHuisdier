@@ -24,6 +24,8 @@ function createWindow() {
     resizable: false,
     skipTaskbar: false,
     hasShadow: false,
+    focusable: false,
+    type: 'panel',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -31,7 +33,7 @@ function createWindow() {
   });
 
   mainWindow.loadFile('index.html');
-  mainWindow.setAlwaysOnTop(true, 'floating');
+  mainWindow.setAlwaysOnTop(true, 'screen-saver');
   mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
 
   // Click-through by default. Renderer will request to capture mouse events
